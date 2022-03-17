@@ -271,3 +271,72 @@
         transition: all 0.3s ease;
         cursor: pointer;
     }
+    .toggle-1__button::before{
+        position: absolute;
+        top: 5px;
+        left: 40px;
+        content: "off";
+        display: inline-block;
+        height: 20px;
+        padding: 0 3px;
+        background: white;
+        color: #f2395a;
+        transition: all 0.3s ease;
+    }
+    .toggle-1__input:checked + .toggle-1__button{
+        background: #00b3b4;
+        border: solid 1px #00b3b4;
+    }
+
+    .toggle-1__input:checked + .toggle-1__button::before{
+        left: 5px;
+        content: "on";
+        color: #00b3b4;
+    }
+
+/*click me button*/
+.toggle-2{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: .8rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+    .toggle-2__input{
+        display: none;
+    }
+    .toggle-2__button{
+        position: relative;
+        display: inline-block;
+        line-height: 20px;
+        text-transform: uppercase;
+        background: white;
+        color: #aaa;
+        border: solid 1px #ccc;
+        padding: 5px 10px 5px 30px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .toggle-2__button::before{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+        content: "";
+        transition: all 0.3s ease;
+        border-radius: 100%;
+    }
+
+    .toggle-2__input:checked + .toggle-2__button{
+        background: #00b3b4;
+        border-color: #00b3b4;
+        color: white;
+    }
+    
+    .toggle-2__input:checked + .toggle-2__button::before{
+        background-color: white;
+    }
